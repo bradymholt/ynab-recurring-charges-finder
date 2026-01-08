@@ -5,9 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/ynab-recurring-charges-finder/',
-  resolve: {
-    alias: {
-      ynab: 'ynab/dist/browser/ynab.js',
+  optimizeDeps: {
+    include: ['ynab'],
+  },
+  build: {
+    commonjsOptions: {
+      transformMixedEsModules: true,
     },
   },
 })

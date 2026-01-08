@@ -162,7 +162,10 @@ function App() {
 
     try {
       const ynabAPI = new ynab.API(accessToken)
-      const transactionsResponse = await ynabAPI.transactions.getTransactions(budgetId)
+      const twelveMonthsAgo = new Date()
+      twelveMonthsAgo.setFullYear(twelveMonthsAgo.getFullYear() - 1)
+      const sinceDate = twelveMonthsAgo.toISOString().split('T')[0]
+      const transactionsResponse = await ynabAPI.transactions.getTransactions(budgetId, sinceDate)
       const recurring = analyzeRecurringCharges(transactionsResponse.data.transactions)
       setRecurringCharges(recurring)
     } catch (err) {

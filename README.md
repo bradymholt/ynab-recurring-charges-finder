@@ -1,3 +1,6 @@
+> [!CAUTION]  
+> This project was initially vide coded using Claude Code
+
 # YNAB Recurring Charges Finder
 
 A React web app that uses the YNAB API to find recurring charges to the same payee. This is helpful for:

@@ -177,7 +177,7 @@ function App() {
     return (
       <div className="container login-view">
         <h1>YNAB Recurring Charges Finder</h1>
-        <p>Find recurring subscriptions and charges in your budget</p>
+        <p>Find recurring subscriptions and charges in your plan</p>
 
         <div className="login-form">
           {loading ? (
@@ -211,14 +211,14 @@ function App() {
       </div>
 
       <div className="budget-selector">
-        <label htmlFor="budget">Select Budget:</label>
+        <label htmlFor="budget">Select Plan:</label>
         <select
           id="budget"
           value={selectedBudget}
           onChange={(e) => handleBudgetChange(e.target.value)}
           disabled={loading}
         >
-          <option value="">Choose a budget...</option>
+          <option value="">Choose a plan...</option>
           {budgets.map(budget => (
             <option key={budget.id} value={budget.id}>
               {budget.name}
@@ -282,7 +282,7 @@ function App() {
 
       {!loading && recurringCharges.length === 0 && selectedBudget && (
         <div className="no-results">
-          <p>No recurring charges found in this budget.</p>
+          <p>No recurring charges found in this plan.</p>
         </div>
       )}
     </div>

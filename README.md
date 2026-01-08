@@ -7,7 +7,7 @@ A React web app that uses the YNAB API to find recurring charges to the same pay
 ## Features
 
 - Secure OAuth authentication with your YNAB account
-- Select any of your budgets
+- Select any of your plans
 - Automatically detect recurring charges based on transaction patterns
 - View recurring charges sorted by amount
 - See transaction history for each recurring charge
@@ -79,7 +79,7 @@ The production build will be in the `dist` folder.
 1. Click "Connect with YNAB" on the login screen
 2. You'll be redirected to YNAB to authorize the app
 3. After authorization, you'll be redirected back to the app
-4. Select a budget from the dropdown
+4. Select a plans from the dropdown
 5. Click "Find Recurring Charges"
 6. Browse the detected recurring charges, sorted by average amount
 7. Click "View all transactions" to see the full history for each recurring charge

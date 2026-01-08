@@ -27,6 +27,9 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+        env:
+          VITE_YNAB_CLIENT_ID: ${{ secrets.VITE_YNAB_CLIENT_ID }}
+          VITE_YNAB_REDIRECT_URI: ${{ vars.VITE_YNAB_REDIRECT_URI }}
 
       - uses: actions/configure-pages@v5
 
